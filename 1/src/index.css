@@ -1,0 +1,56 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* Add this import to your CSS file or index.js */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+
+/* Your custom styles go here */
+.hero-background {
+  background-image: url(../../homeopathy.webp); /* Adjust the path based on your project structure */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+  .carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+  }
+  .carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+
+  #carousel-1:checked ~  .control-1, #carousel-2:checked ~ .control-2, #carousel-3:checked ~ .control-3, #carousel-4:checked ~ .control-4 {
+    display: block;
+  }
+
+  .carousel-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 8px;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .carousel-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  .carousel-indicator:hover, .carousel .carousel-indicator:checked {
+    background-color: #fff;
+  }
+
+  .hover_image {
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.hover_image:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+}
